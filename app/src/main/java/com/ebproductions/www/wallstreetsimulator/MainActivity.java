@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity
     ListView lv;
 
     // Used to load the 'native-lib' library on application startup.
-    //ich habe aber hunger
+    //ich habe aber hunge
     static
     {
         System.loadLibrary("native-lib");
