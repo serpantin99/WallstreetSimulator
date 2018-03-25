@@ -9,13 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/label_settings"
+            android:theme="@style/AppTheme">
+            <!--<intent-filter>
+                 hier werden Eintrittspunkte für die Activity deklariert.
+                 category.LAUNCHER heißt dass es vom app-launcher aufzurufen ist.
+                 wird benutzt um einer Activity eine <action> zuzuweisen, wodurch
+                 diese activity auch direkt aufgerufen werden kann, ohne durch das menu gehen
+                 zu müssen(z.B. wenn man was auf Facebook teilen will, wird
+                 sofort die Share-Seite aufgerufen).
+                 BEHINDERT: Das Programm kann nicht builden, wenn die Tags
+                 <intent-filter></intent-filter> nicht auch auskommentiert sind.
+            </intent-filter>-->
         </activity>
     </application>
 </manifest>
