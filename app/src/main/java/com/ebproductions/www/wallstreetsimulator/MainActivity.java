@@ -43,6 +43,13 @@ public class MainActivity extends AppCompatActivity
 
             return true;
         }
+        if (id == R.id.action_myShares)
+        {
+            Intent intent = new Intent(this, MySharesActivity.class);
+            startActivity(intent);
+
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

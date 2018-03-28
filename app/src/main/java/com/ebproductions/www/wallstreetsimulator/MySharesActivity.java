@@ -5,15 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 /**
- * Created by Michael on 25.03.2018.
+ * Created by Michael on 28.03.2018.
  */
 
-public class SettingsActivity extends AppCompatActivity
+public class MySharesActivity extends AppCompatActivity
 {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_myshares);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

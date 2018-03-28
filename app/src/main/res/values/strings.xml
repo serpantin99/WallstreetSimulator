@@ -1,7 +1,6 @@
 <resources>
     <!-- All Labels -->
     <string name="app_name">WallstreetSimulator</string>
-    <string name="label_settings">Einstellungen</string>
 
     <!-- All Menu-Points -->
     <string name="action_settings">Einstellungen</string>
