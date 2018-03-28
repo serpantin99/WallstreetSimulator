@@ -20,7 +20,9 @@ public class SettingsActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         // Get a support ActionBar corresponding to this toolbar
-        ActionBar ab = getSupportActionBar();   //kp warum wir das brauchen
-        ab.setDisplayHomeAsUpEnabled(true);     //aber das gibt uns hierdurch den Zurück(Up)-Button
+        //ActionBar ab = getSupportActionBar();   //kp warum wir das brauchen
+        //ab.setDisplayHomeAsUpEnabled(true);     //aber das gibt uns hierdurch den Zurück(Up)-Button
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
