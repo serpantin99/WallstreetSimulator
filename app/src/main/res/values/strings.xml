@@ -5,4 +5,5 @@
     <!-- All Menu-Points -->
     <string name="action_settings">Einstellungen</string>
     <string name="action_myShares">Meine Aktien</string>
+    <string name="action_sharePrice">Aktienkurs</string>
 </resources>

@@ -34,10 +34,17 @@
                  <intent-filter></intent-filter> nicht auch auskommentiert sind.
             </intent-filter>-->
         </activity>
+
         <activity
             android:name=".MySharesActivity"
             android:parentActivityName=".MainActivity"
             android:label="@string/action_myShares"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".SharePriceActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/action_sharePrice"
             android:theme="@style/AppTheme" />
     </application>
 </manifest>

@@ -50,6 +50,11 @@ public class MainActivity extends AppCompatActivity
 
             return true;
         }
+        if (id == R.id.action_sharePrice)
+        {
+            Intent intent = new Intent(this, SharePriceActivity.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }
