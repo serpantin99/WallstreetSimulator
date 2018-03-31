@@ -23,16 +23,6 @@
             android:parentActivityName=".MainActivity"
             android:label="@string/action_settings"
             android:theme="@style/AppTheme">
-            <!--<intent-filter>
-                 hier werden Eintrittspunkte für die Activity deklariert.
-                 category.LAUNCHER heißt dass es vom app-launcher aufzurufen ist.
-                 wird benutzt um einer Activity eine <action> zuzuweisen, wodurch
-                 diese activity auch direkt aufgerufen werden kann, ohne durch das menu gehen
-                 zu müssen(z.B. wenn man was auf Facebook teilen will, wird
-                 sofort die Share-Seite aufgerufen).
-                 BEHINDERT: Das Programm kann nicht builden, wenn die Tags
-                 <intent-filter></intent-filter> nicht auch auskommentiert sind.
-            </intent-filter>-->
         </activity>
 
         <activity
