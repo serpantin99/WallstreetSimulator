@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ebproductions.www.wallstreetsimulator">
+    package="com.wallstreetsim">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name="com.ebproductions.www.activities.MainActivity"
+            android:name="com.wallstreetsim.activities.MainActivity"
             android:theme="@style/AppTheme"
             android:label="@string/app_name">
             <intent-filter>
@@ -21,21 +21,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ebproductions.www.activities.SettingsActivity"
-            android:parentActivityName="com.ebproductions.www.activities.MainActivity"
+            android:name="com.wallstreetsim.activities.SettingsActivity"
+            android:parentActivityName="com.wallstreetsim.activities.MainActivity"
             android:label="@string/action_settings"
             android:theme="@style/AppTheme">
         </activity>
 
         <activity
-            android:name="com.ebproductions.www.activities.MySharesActivity"
-            android:parentActivityName="com.ebproductions.www.activities.MainActivity"
+            android:name="com.wallstreetsim.activities.MySharesActivity"
+            android:parentActivityName="com.wallstreetsim.activities.MainActivity"
             android:label="@string/action_myShares"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.ebproductions.www.activities.SharePriceActivity"
-            android:parentActivityName="com.ebproductions.www.activities.MainActivity"
+            android:name="com.wallstreetsim.activities.SharePriceActivity"
+            android:parentActivityName="com.wallstreetsim.activities.MainActivity"
             android:label="@string/action_sharePrice"
             android:theme="@style/AppTheme" />
     </application>

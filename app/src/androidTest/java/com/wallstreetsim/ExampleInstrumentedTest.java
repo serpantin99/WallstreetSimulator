@@ -1,4 +1,4 @@
-package com.ebproductions.www.wallstreetsimulator;
+package com.wallstreetsim;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ebproductions.www.wallstreetsimulator", appContext.getPackageName());
+        assertEquals("com.wallstreetsim", appContext.getPackageName());
     }
 }

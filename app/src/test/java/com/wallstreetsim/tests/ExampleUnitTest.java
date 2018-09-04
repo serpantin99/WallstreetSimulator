@@ -1,4 +1,4 @@
-package com.ebproductions.www.wallstreetsimulator;
+package com.wallstreetsim.tests;
 
 import org.junit.Test;
 

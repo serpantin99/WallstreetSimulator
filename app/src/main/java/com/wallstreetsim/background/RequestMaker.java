@@ -30,11 +30,11 @@ public class RequestMaker extends AsyncTask<String, Void, Response> {
         return response;
     }
 
-    protected void onProgressUpdate(Integer... progress) {
-
-    }
-
     protected void onPostExecute(Response result) {
-        Log.i("Response: ", result.toString());
+        try {
+            Log.i("Response: ", result.body().string());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
