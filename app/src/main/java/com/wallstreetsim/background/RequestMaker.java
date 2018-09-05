@@ -2,6 +2,9 @@ package com.wallstreetsim.background;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.TextView;
+
+import com.wallstreetsim.R;
 
 import java.io.IOException;
 
@@ -9,8 +12,9 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class RequestMaker extends AsyncTask<String, Void, Response> {
-    protected Response doInBackground(String... args) {
+public class RequestMaker extends AsyncTask<String, Void, String> {
+    @Override
+    protected String doInBackground(String... args) {
         String url = args[0];
 
         OkHttpClient client = new OkHttpClient();
@@ -27,14 +31,19 @@ public class RequestMaker extends AsyncTask<String, Void, Response> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return response;
+        if(response != null) {
+            try {
+                return response.body().string();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return "failed";
+            }
+        } else
+            return "failed";
     }
-
-    protected void onPostExecute(Response result) {
-        try {
-            Log.i("Response: ", result.body().string());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @Override
+    protected void onPostExecute(String result) {
+        Log.i("Result", result);
+        //Log.i("Response: ", result.body().toString());
     }
 }
