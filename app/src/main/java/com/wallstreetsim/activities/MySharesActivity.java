@@ -26,10 +26,11 @@ public class MySharesActivity extends AppCompatActivity
     }
 
     public void reqTest(View v) {
-        /*RequestMaker rqm = new RequestMaker();
-        rqm.execute(url);*/
+        RequestMaker rqm = new RequestMaker();
         String url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=EUR&apikey=RSF9Z2UFYUI01LN1";
 
-        new RequestMaker().execute(url);
+        rqm.execute(url);
+
+        //new RequestMaker().execute(url);
     }
 }

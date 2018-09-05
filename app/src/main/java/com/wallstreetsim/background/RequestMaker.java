@@ -2,9 +2,6 @@ package com.wallstreetsim.background;
 
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.TextView;
-
-import com.wallstreetsim.R;
 
 import java.io.IOException;
 
@@ -41,6 +38,7 @@ public class RequestMaker extends AsyncTask<String, Void, String> {
         } else
             return "failed";
     }
+
     @Override
     protected void onPostExecute(String result) {
         Log.i("Result", result);
