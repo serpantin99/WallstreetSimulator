@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText("Hello Word!");
+        tv.setText("Hello World!");
     }
 
     @Override
