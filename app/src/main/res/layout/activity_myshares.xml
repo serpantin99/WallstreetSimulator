@@ -8,13 +8,41 @@
         layout="@layout/toolbar" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/min60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/toolbar"
         android:onClick="reqTest"
-        android:text="Get Data" />
+        android:text="60 min" />
+
+    <Button
+        android:id="@+id/min30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_toEndOf="@+id/min60"
+        android:onClick="reqTest"
+        android:text="30 min" />
+
+    <Button
+        android:id="@+id/min15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_toEndOf="@+id/min30"
+        android:onClick="reqTest"
+        android:text="15 min" />
+
+    <Button
+        android:id="@+id/min5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_toEndOf="@+id/min15"
+        android:onClick="reqTest"
+        android:text="5 min" />
+
 
     <ListView
         android:id="@+id/listView"
@@ -23,5 +51,4 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="106dp" />
-
 </RelativeLayout>

@@ -20,7 +20,7 @@ public class BackgroundParser extends AsyncTask<String, Void, Pair<String[], Lin
     protected Pair<String[], LinkedHashMap<String, String[]>> doInBackground(String... args) {
         String data = args[0];
         String[] md = MetaDataParser.parse(data);
-        LinkedHashMap<String, String[]> ts = TimeSeriesParser.parse(data, 60);
+        LinkedHashMap<String, String[]> ts = TimeSeriesParser.parse(data);
 
         return Pair.create(md, ts);
     }

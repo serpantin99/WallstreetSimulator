@@ -34,10 +34,21 @@ public class MySharesActivity extends AppCompatActivity implements OnTaskComplet
 
     public void reqTest(View v) {
         RequestMaker rqm = new RequestMaker(this);
-        String url = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=APC&interval=60min&datatype=json&apikey=RSF9Z2UFYUI01LN1";
-        rqm.execute(url);
+        String min = null;
 
-        //new RequestMaker().execute(url);
+        if(v.getId() == R.id.min60)
+            min = "60";
+        else if(v.getId() == R.id.min30)
+            min = "30";
+        else if(v.getId() == R.id.min15)
+            min = "15";
+        else if(v.getId() == R.id.min5)
+            min = "5";
+
+        if(min != null) {
+            String url = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=APC&interval=" + min + "min&apikey=RSF9Z2UFYUI01LN1";
+            rqm.execute(url);
+        }
     }
 
     @Override
