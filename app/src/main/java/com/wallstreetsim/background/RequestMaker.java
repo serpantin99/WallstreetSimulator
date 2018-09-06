@@ -3,6 +3,8 @@ package com.wallstreetsim.background;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.wallstreetsim.interfaces.OnTaskCompleted;
+
 import java.io.IOException;
 
 import okhttp3.OkHttpClient;
@@ -10,6 +12,12 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class RequestMaker extends AsyncTask<String, Void, String> {
+    private OnTaskCompleted listener;
+
+    public RequestMaker(OnTaskCompleted listener) {
+        this.listener = listener;
+    }
+
     @Override
     protected String doInBackground(String... args) {
         String url = args[0];
@@ -41,7 +49,6 @@ public class RequestMaker extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Log.i("Result", result);
-        //Log.i("Response: ", result.body().toString());
+        listener.onRequestCompleted(result);
     }
 }
