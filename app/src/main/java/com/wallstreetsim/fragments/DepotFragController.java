@@ -29,18 +29,26 @@ public class DepotFragController extends Fragment implements View.OnClickListene
 
     @Override
     public void onClick(View view) {
-        Ion.with(getContext())
-                .load("https://api.iextrading.com/1.0/stock/market/crypto?filter=symbol")
-                .asString()
-                .withResponse()
-                .setCallback(new FutureCallback<Response<String>>() {
-                    @Override
-                    public void onCompleted(Exception e, Response<String> result) {
-                        // print the response code, ie, 200
-                        Log.i("Response", String.valueOf(result.getHeaders().code()));
-                        // print the String that was downloaded
-                        Log.i("Response", result.getResult());
-                    }
-                });
+        switch(view.getId()) {
+            case R.id.min60:
+                Ion.with(getContext())
+                    .load("https://api.iextrading.com/1.0/stock/market/crypto?filter=symbol")
+                    .asString()
+                    .withResponse()
+                    .setCallback(new FutureCallback<Response<String>>() {
+                        @Override
+                        public void onCompleted(Exception e, Response<String> result) {
+                            // print the response code, ie, 200
+                            Log.i("Response", String.valueOf(result.getHeaders().code()));
+                            // print the String that was downloaded
+                            Log.i("Response", result.getResult());
+                        }
+                    });
+                Log.i("Response", "Asynchron");
+                break;
+            case R.id.min30:
+                break;
+        }
+
     }
 }
