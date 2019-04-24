@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_view">
+    <group
+        android:id="@+id/equity_section"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_myShares"
+            android:title="@string/action_myShares" />
+        <item
+            android:id="@+id/nav_market"
+            android:title="@string/action_market" />
+        <item
+            android:id="@+id/nav_news"
+            android:title="@string/action_news" />
+    </group>
+    <group
+        android:id="@+id/settings_section"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/action_settings" />
+    </group>
+</menu>

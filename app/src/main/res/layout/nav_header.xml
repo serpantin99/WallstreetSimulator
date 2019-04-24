@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:background="@color/colorPrimaryDarkNav"
+    android:padding="16dp"
+    android:theme="@style/NavTheme"
+    android:gravity="bottom">
+
+    <ImageView
+        android:id="@+id/userLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/userLogo"
+        android:textColor="@color/textColorPrimaryInverse"
+        android:textSize="20sp"
+        android:text="User Name" />
+
+    <ImageView
+        android:id="@+id/eurLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/userName"
+        android:layout_below="@+id/userName"
+        android:src="@drawable/ic_euro_symbol_lime_24dp" />
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:layout_marginLeft="0dp"
+        android:layout_toEndOf="@+id/eurLogo"
+        android:textColor="@color/textColorPrimaryInverse"
+        android:textSize="18sp"
+        android:text="24389" />
+
+    <ImageView
+        android:id="@+id/trendLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/money"
+        android:layout_below="@+id/userName"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_trending_down_red_24dp" />
+    <TextView
+        android:id="@+id/earnings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:layout_toEndOf="@+id/trendLogo"
+        android:textColor="@color/textColorPrimaryInverse"
+        android:textSize="18sp"
+        android:text="-6,11%" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/textColorPrimaryInverse"
+        android:textSize="24sp"
+        android:text="@string/app_name" />
+
+</RelativeLayout>

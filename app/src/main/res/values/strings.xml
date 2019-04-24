@@ -1,0 +1,10 @@
+<resources>
+    <!-- All Labels -->
+    <string name="app_name">WallstreetSimulator</string>
+
+    <!-- All Menu-Points -->
+    <string name="action_myShares">Meine Aktien</string>
+    <string name="action_market">Aktienmarkt</string>
+    <string name="action_news">News</string>
+    <string name="action_settings">Einstellungen</string>
+</resources>
