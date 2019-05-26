@@ -15,6 +15,7 @@ import com.wallstreetsim.R;
 import com.wallstreetsim.activities.MainActivity;
 
 public class DepotFragController extends Fragment implements View.OnClickListener {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ((MainActivity) getActivity())
